@@ -1,0 +1,11 @@
+# root output
+/build/
+/devel/
+
+# package output and configuration files
+/src/**/.vscode/
+/src/**/build/
+/src/**/include/
+
+# package temp files to test algorithm
+/src/**/temp/
