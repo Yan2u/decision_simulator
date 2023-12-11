@@ -1,0 +1,6 @@
+health: 400.0
+attack: 60.0
+defense: 10.0
+size_n: 9
+size_m: 9
+n_players: 2

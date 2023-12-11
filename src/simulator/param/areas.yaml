@@ -1,0 +1,4 @@
+# 0 = block, 1 = atk, 2 = def, 3 = health
+- { x1: 4, y1: 2, x2: 4, y2: 6, camp: 2, type: 0 }  # block 1
+- { x1: 0, y1: 7, x2: 1, y2: 8, camp: 0, type: 3, value: 50.0 }  # health 1
+- { x1: 7, y1: 0, x2: 8, y2: 1, camp: 1, type: 3, value: 50.0 }  # health 2
