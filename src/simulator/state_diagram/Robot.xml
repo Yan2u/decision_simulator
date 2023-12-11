@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StateDiagram>
+    <Edge from="$start_state" to="still" condition="all" />
+    <Edge from="still" to="still" condition="none" />
+    <Edge from="still" to="attack" condition="see_enermy" priority="1" />
+    <Edge from="still" to="attacked" condition="attacked" priority="2" />
+    <Edge from="still" to="health" condition="low_health" priority="3" />
+    <Edge from="still" to="die" condition="health_zero" priority="4" />
+
+    <Edge from="health" to="still" condition="enough_health" priority="1" />
+    <Edge from="health" to="stay" condition="at_buff_health AND NOT enough_health" priority="2" />
+    <Edge from="health" to="health" condition="NOT enough_health AND NOT at_buff_health"
+        priority="3" />
+    <Edge from="health" to="die" condition="health_zero" priority="4" />
+
+    <Edge from="stay" to="still" condition="enough_health" priority="1" />
+    <Edge from="stay" to="attacked" condition="attacked" priority="2" />
+    <Edge from="stay" to="health" condition="NOT enough_health AND NOT at_buff_health" priority="3" />
+    <Edge from="stay" to="die" condition="health_zero" priority="4" />
+    <Edge from="stay" to="stay" condition="none" />
+
+    <Edge from="attack" to="attack" condition="see_enermy" priority="1" />
+    <Edge from="attack" to="attacked" condition="attacked" priority="2" />
+    <Edge from="attack" to="health" condition="low_health" priority="3" />
+    <Edge from="attack" to="die" condition="health_zero" priority="4" />
+    <Edge from="attack" to="still" condition="none" />
+
+    <Edge from="attacked" to="attacked" condition="attacked" priority="1" />
+    <Edge from="attacked" to="still" condition="none" />
+</StateDiagram>
