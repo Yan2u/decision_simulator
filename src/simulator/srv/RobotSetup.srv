@@ -1,0 +1,11 @@
+uint8 BLUE = 0
+uint8 RED = 1
+uint8 camp
+int32 id
+---
+float64 health
+float64 attack
+float64 defense
+int32 pos_x
+int32 pos_y
+uint8 direction
