@@ -1,0 +1,24 @@
+<launch>
+
+    <rosparam command="load" file="$(find simulator)/param/numeric.yaml" param="numeric"
+        ns="simulator" />
+
+    <rosparam command="load" file="$(find simulator)/param/areas.yaml" param="areas"
+        ns="simulator" />
+
+    <param name="/simulator/autoplay" value="true" />
+
+    <node pkg="simulator" type="Judger_node" name="judger" ns="simulator" output="screen"
+        required="true" />
+
+    <node pkg="simulator" type="Robot_node" name="robot1" ns="simulator">
+        <param name="camp" value="0" />
+        <param name="id" value="0" />
+    </node>
+
+    <node pkg="simulator" type="Robot_node" name="robot2" ns="simulator">
+        <param name="camp" value="1" />
+        <param name="id" value="1" />
+    </node>
+
+</launch>
