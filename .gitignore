@@ -9,3 +9,6 @@
 
 # package temp files to test algorithm
 /src/**/temp/
+
+# WSL ZONE IDENTIFIER
+*Zone.Identifier
